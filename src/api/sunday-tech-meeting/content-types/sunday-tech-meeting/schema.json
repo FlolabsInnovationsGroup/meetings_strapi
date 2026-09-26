@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sunday_tech_meetings",
+  "info": {
+    "singularName": "sunday-tech-meeting",
+    "pluralName": "sunday-tech-meetings",
+    "displayName": "sunday_tech_meeting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meeting_date": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "meeting_link": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_summary": {
+      "type": "blocks",
+      "required": true
+    },
+    "meeting_transcription": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

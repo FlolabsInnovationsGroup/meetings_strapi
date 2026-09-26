@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wednesday_tech_meetings",
+  "info": {
+    "singularName": "wednesday-tech-meeting",
+    "pluralName": "wednesday-tech-meetings",
+    "displayName": "wednesday_tech_meeting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meeting_title": {
+      "type": "string",
+      "required": true
+    },
+    "meeting_date": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_link": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_summary": {
+      "type": "blocks",
+      "required": true
+    },
+    "meeting_transcription": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

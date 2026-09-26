@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "humanoid_meetings",
+  "info": {
+    "singularName": "humanoid-meeting",
+    "pluralName": "humanoid-meetings",
+    "displayName": "humanoid_meeting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meeting_title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "meeting_date": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_link": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_summary": {
+      "type": "blocks",
+      "required": true
+    },
+    "meeting_transcription": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

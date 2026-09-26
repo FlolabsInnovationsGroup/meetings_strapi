@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marketing_meetings",
+  "info": {
+    "singularName": "marketing-meeting",
+    "pluralName": "marketing-meetings",
+    "displayName": "marketing_meeting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meeting_title": {
+      "type": "string",
+      "required": true
+    },
+    "meeting_date": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_link": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_summary": {
+      "type": "blocks",
+      "required": true
+    },
+    "meeting_transcription": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

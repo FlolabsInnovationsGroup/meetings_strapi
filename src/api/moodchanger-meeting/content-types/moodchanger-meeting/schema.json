@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moodchanger_meetings",
+  "info": {
+    "singularName": "moodchanger-meeting",
+    "pluralName": "moodchanger-meetings",
+    "displayName": "moodchanger_meeting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meeting_date": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "meeting_link": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "meeting_summary": {
+      "type": "blocks",
+      "required": true
+    },
+    "meeting_transcription": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}
