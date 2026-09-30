@@ -923,6 +923,39 @@ export interface ApiPmMeetingPmMeeting extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiReviewReview extends Struct.CollectionTypeSchema {
+  collectionName: 'reviews';
+  info: {
+    displayName: 'review';
+    pluralName: 'reviews';
+    singularName: 'review';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::review.review'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    review_summary: Schema.Attribute.Text & Schema.Attribute.Required;
+    review_tittle: Schema.Attribute.String & Schema.Attribute.Required;
+    review_video: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSpaceMeetingSpaceMeeting
   extends Struct.CollectionTypeSchema {
   collectionName: 'space_meetings';
@@ -1558,6 +1591,7 @@ declare module '@strapi/strapi' {
       'api::moodchanger-meeting.moodchanger-meeting': ApiMoodchangerMeetingMoodchangerMeeting;
       'api::multimodal-meeting.multimodal-meeting': ApiMultimodalMeetingMultimodalMeeting;
       'api::pm-meeting.pm-meeting': ApiPmMeetingPmMeeting;
+      'api::review.review': ApiReviewReview;
       'api::space-meeting.space-meeting': ApiSpaceMeetingSpaceMeeting;
       'api::sunday-tech-meeting.sunday-tech-meeting': ApiSundayTechMeetingSundayTechMeeting;
       'api::wednesday-tech-meeting.wednesday-tech-meeting': ApiWednesdayTechMeetingWednesdayTechMeeting;
