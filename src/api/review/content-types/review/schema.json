@@ -29,6 +29,10 @@
     "review_summary": {
       "type": "text",
       "required": true
+    },
+    "review_transcript": {
+      "type": "blocks",
+      "required": true
     }
   }
 }

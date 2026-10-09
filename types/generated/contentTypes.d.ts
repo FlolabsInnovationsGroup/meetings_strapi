@@ -946,6 +946,7 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     review_summary: Schema.Attribute.Text & Schema.Attribute.Required;
     review_tittle: Schema.Attribute.String & Schema.Attribute.Required;
+    review_transcript: Schema.Attribute.Blocks & Schema.Attribute.Required;
     review_video: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
